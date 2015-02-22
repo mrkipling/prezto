@@ -10,4 +10,39 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+
+
+
+
+# My customisation
+
+alias ls='ls -al --color'
+alias sc='screen -dR'
+
+alias m='python manage.py'
+alias delpyc='find -name "*.pyc" -delete'
+
+alias tor='/home/brad/Programs/tor-browser_en-US/start-tor-browser'
+alias vbox='sudo /etc/init.d/vboxdrv setup'
+
+alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
+
+alias monitor_on='xrandr --output eDP1 --auto'
+alias monitor_off='xrandr --output eDP1 --off'
+
+function fname() { find . -iname "*$@*"; }
+
+# Temporary hack! This (potentially) fixes slow wifi when on battery power by
+# turning off power-saving features.
+# http://ubuntuforums.org/showthread.php?t=1678098
+alias fix_slow_wifi='sudo iwconfig wlan0 power off'
+
+# GPG
+alias gpg-import='gpg --import ~/Downloads/address.txt'
+function gpg-encrypt {
+    gpg --recipient $1 --output ~/Downloads/message.gpg --armor --encrypt ~/Downloads/message.txt
+}
+
+# upload a file for temporary (2 week) sharing via http://transfer.sh/
+function transfer() { curl --upload-file ./$1 https://transfer.sh/$1; }
+alias transfer=transfer
