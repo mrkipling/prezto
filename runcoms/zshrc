@@ -32,9 +32,10 @@ alias monitor_off='xrandr --output eDP1 --off'
 
 # grep global aliases
 alias -g '[py]'='--include="*.py"'
-alias -g '[js]'='core/static/js/* -r --exclude="{build/*,core/static/js/lib/*,blog.js,}"'
-alias -g '[less]'='core/static/less/* -r --exclude="{build/*,core/static/less/lib/*}"'
-alias -g '[html]'='* -r --include="*.html"'
+alias -g '[js]'='--include="*.js"'
+alias -g '[less]'='--include="*.less"'
+alias -g '[css]'='--include="*.css"'
+alias -g '[html]'='--include="*.html"'
 
 function fname() { find . -iname "*$@*"; }
 
