@@ -23,12 +23,7 @@ alias m='python manage.py'
 alias delpyc='find -name "*.pyc" -delete'
 
 alias tor='/home/brad/Programs/tor-browser_en-US/start-tor-browser'
-alias vbox='sudo /etc/init.d/vboxdrv setup'
-
 alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
-
-alias monitor_on='xrandr --output eDP1 --auto'
-alias monitor_off='xrandr --output eDP1 --off'
 
 # grep global aliases
 alias -g '[py]'='--include="*.py"'
@@ -56,7 +51,6 @@ alias transfer=transfer
 
 # Make git branch autocompletion not painfully slow
 # http://superuser.com/questions/458906/zsh-tab-completion-of-git-commands-is-very-slow-how-can-i-turn-it-off
-
 __git_files () {
     _wanted files expl 'local files' _files
 }
