@@ -49,6 +49,18 @@ function gpg-encrypt {
 function transfer() { curl --upload-file ./$1 https://transfer.sh/$1; }
 alias transfer=transfer
 
+# interactive move
+# very useful; even creates the directory if it doesn't exist
+imv() {
+  local src dst
+  for src; do
+    [[ -e $src ]] || { print -u2 "$src does not exist"; continue }
+    dst=$src
+    vared dst
+    [[ $src != $dst ]] && mkdir -p $dst:h && mv -n $src $dst
+  done
+}
+
 # Make git branch autocompletion not painfully slow
 # http://superuser.com/questions/458906/zsh-tab-completion-of-git-commands-is-very-slow-how-can-i-turn-it-off
 __git_files () {
