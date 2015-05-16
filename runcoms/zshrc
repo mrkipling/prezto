@@ -21,8 +21,6 @@ alias sc='screen -dR'
 
 alias m='python manage.py'
 alias delpyc='find -name "*.pyc" -delete'
-
-alias tor='/home/brad/Programs/tor-browser_en-US/start-tor-browser'
 alias optimise_jpgs='mkdir optimised; for i in *.JPG; do jpegoptim "$i" --max=80 --dest="optimised"; done'
 
 # grep global aliases
