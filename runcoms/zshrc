@@ -16,6 +16,8 @@ fi
 
 # My customisation
 
+alias editzsh='emacs ~/.zprezto/brad.custom.zsh'
+
 alias ls='ls -al --color'
 alias sc='screen -dR'
 
