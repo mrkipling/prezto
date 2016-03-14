@@ -32,6 +32,9 @@ alias -g '[less]'='--include="*.less"'
 alias -g '[css]'='--include="*.css"'
 alias -g '[html]'='--include="*.html"'
 
+# confirm before deleting crontab
+alias crontab='crontab -i'
+
 function fname() { find . -iname "*$@*"; }
 
 # Temporary hack! This (potentially) fixes slow wifi when on battery power by
