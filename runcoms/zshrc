@@ -44,7 +44,12 @@ alias fix_slow_wifi='sudo iwconfig wlan0 power off'
 
 # GPG
 alias gpg-import='gpg --import ~/Downloads/address.txt'
+
 function gpg-encrypt {
+    gpg --recipient $1 --output ~/Downloads/message.gpg --armor --encrypt ~/Misc/message.txt
+}
+
+function gpg-encrypt-custom {
     gpg --recipient $1 --output ~/Downloads/message.gpg --armor --encrypt ~/Downloads/message.txt
 }
 
