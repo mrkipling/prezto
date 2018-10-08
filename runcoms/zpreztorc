@@ -39,6 +39,13 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'ssh'
 
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line' \
+  'root'
+
 #
 # Editor
 #
